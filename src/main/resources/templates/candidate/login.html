@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login do Candidato</title>
+  </head>
+
+  <body>
+    <form th:action="@{/candidate/signIn}" method="post">
+      <div>
+        <h1>Gestão de Vagas</h1>
+      </div>
+      <input type="text" name="username" placeholder="Nome de usuário" />
+      <input type="password" name="password" placeholder="Senha" />
+      <p th:if="${error_message}" th:text="${error_message}"></p>
+      <button>Entrar</button>
+      <a href="">Crie sua conta</a>
+    </form>
+  </body>
+</html>
